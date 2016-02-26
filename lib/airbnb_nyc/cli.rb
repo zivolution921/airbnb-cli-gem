@@ -9,7 +9,7 @@ class AirbnbNyc::CLI
 
   def list_deals
     puts "Today's Airbnb Deals in NYC:"
-    @deals = 
+    @deals = AirbnbNyc::List.today
   end
 
 end

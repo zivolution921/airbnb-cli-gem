@@ -1,10 +1,17 @@
 class Airbnb::List
   attr_accessor :name, :price, :details
 
+  def self.today
+    # Scrape airbnb and return list of deals based on the data
+    self.scrape_airbnb
+  end
+
   def self.scrape_list
     list = []
 
     list << self.scrape_airbnb
+
+    list
   end
 
   def self.scrape_airbnb
