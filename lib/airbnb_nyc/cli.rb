@@ -3,7 +3,13 @@
 class AirbnbNyc::CLI
 
   def call
-    puts "Today Airbnb Deals in NYC:"
+    list_deals
+    goodbye
+  end
+
+  def list_deals
+    puts "Today's Airbnb Deals in NYC:"
+    @deals = 
   end
 
 end
