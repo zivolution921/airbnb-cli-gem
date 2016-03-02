@@ -1,15 +1,5 @@
-# Our CLI Controller
-
-class AirbnbNyc::CLI
-
+class AirbnbNYC::CLI # It controls everything
   def call
-    list_deals
-    goodbye
+    puts "Welcome to Airbnb NYC"
   end
-
-  def list_deals
-    puts "Today's Airbnb Deals in NYC:"
-    @deals = AirbnbNyc::List.today
-  end
-
 end
