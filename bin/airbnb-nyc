@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "./lib/airbnb_nyc"
+require "airbnb_nyc"
 
-
-AirbnbNyc::CLI.new.call
+if ARGV[0] == "titles"
+  AirbnbNYC::CLI.new.titles
+else
+  AirbnbNYC::CLI.new.call
+end

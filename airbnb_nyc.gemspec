@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'airbnb/version'
+require 'airbnb_nyc/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "airbnb"
-  spec.version       = Airbnb::VERSION
+  spec.name          = "airbnb_nyc"
+  spec.version       = AirbnbNYC::VERSION
   spec.authors       = ["Ziv Zamechek"]
   spec.email         = ["ziv921@yahoo.com"]
 
