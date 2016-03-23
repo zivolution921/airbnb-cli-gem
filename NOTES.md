@@ -1,16 +1,11 @@
 - A command line interface to analyze data and draw insights on the rental market for airbnb in NYC 
 
+executable in the bin
 user types airbnb-nyc
 
-show list of apartments including:
-1. Listing Name
-2. Price
-3. Room Type
-4. Reviews
-5. Location
 
 
-1. When my program starts, go to airbnb nyc and get all the data
+1. When my program starts, go to airbnb-nyc and get all the data
 
   bin/airbnb-nyc
     CLI.new.call
@@ -25,10 +20,14 @@ show list of apartments including:
         The #scrape method should make a AirbnbNYC::Listing instance for each instance it scrapes.
       Whenever an AirbnbNYC::Listing object is instantiated the AirbnbNYC::Listing class should keep track of them all in @@all instance var
     When the user types list
-      AirbnbNYC::List.all.each do |list|
+      AirbnbNYC::Listing.all.each do |list|
         puts list.title
       end
 
 
     AirbnbScraper.new.scrape 
     AirbnbNYC::List.all #=> [#<List>, #<List>, #<List>]
+
+User Interaction
+  ask to lists listings, then they should be able to see more details about a listing from the list by entering its index/id
+  ask them for a location or a price range and then filter the listings you scraped

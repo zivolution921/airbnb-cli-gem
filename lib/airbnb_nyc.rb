@@ -1,3 +1,5 @@
+# Environment requiring all dependancies
+# loading all the files for the app
 require 'open-uri'
 require 'nokogiri'
 require 'pry'

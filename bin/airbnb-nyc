@@ -1,10 +1,16 @@
 #!/usr/bin/env ruby
+# CLI Controller user logic
 
 require "bundler/setup"
 require "airbnb_nyc"
 
-if ARGV[0] == "titles"
-  AirbnbNYC::CLI.new.titles
-else
-  AirbnbNYC::CLI.new.call
+puts "Fetching your data..."
+
+cli = AirbnbNYC::CLI.new
+
+case ARGV[0]
+when "titles" then cli.titles
+when "details" then cli.details
+when "price" then cli.price
+else cli.call
 end
